@@ -8,12 +8,17 @@
   ];
 
   networking = {
-    hostName = "docu.FI-X-yz.oszimt.lan";
+    hostName = "docu.FI-C-32.oszimt.lan";
     useDHCP = true;
     firewall = {
       enable = true;
     };
+    interfaces = {
+      ens3.ipv4.addresses = [{
+        address = "192.168.100.2";
+      }];
+    };
   };
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 }
