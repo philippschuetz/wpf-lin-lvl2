@@ -1,4 +1,6 @@
-{pkgs, ...}: {
+let
+  domain = "example.com";
+in {pkgs, ...}: {
   services.bookstack = {
     user = "bookstack";
     group = "bookstack";
